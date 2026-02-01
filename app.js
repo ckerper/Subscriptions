@@ -49,16 +49,6 @@ const subscriptions = [
         skipDeadline: "2026-07-21"
     },
 
-    // Food
-    {
-        name: "Kodiak",
-        category: "Food",
-        price: 23.94,  // $22.69 + 5.5% tax
-        frequency: "monthly",
-        nextDate: "2026-02-28",
-        type: "shipping",
-        skipDeadline: "2026-02-21"
-    }
 ];
 
 // Frequency multipliers for annual cost calculation
