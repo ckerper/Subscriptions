@@ -1,156 +1,63 @@
 // Subscription data - Edit this array to manage your subscriptions
 const subscriptions = [
-    // Streaming & Entertainment
+    // Software
     {
-        name: "Netflix",
-        category: "Streaming",
-        price: 15.99,
-        frequency: "monthly",
-        nextDate: "2026-02-15",
-        type: "billing"
-    },
-    {
-        name: "Spotify Family",
-        category: "Streaming",
-        price: 16.99,
-        frequency: "monthly",
-        nextDate: "2026-02-08",
-        type: "billing"
-    },
-    {
-        name: "Disney+",
-        category: "Streaming",
-        price: 13.99,
-        frequency: "monthly",
-        nextDate: "2026-02-20",
-        type: "billing"
-    },
-
-    // Software & Tools
-    {
-        name: "Adobe Creative Cloud",
+        name: "LLama Life",
         category: "Software",
-        price: 54.99,
-        frequency: "monthly",
-        nextDate: "2026-02-05",
-        type: "billing"
-    },
-    {
-        name: "1Password",
-        category: "Software",
-        price: 35.88,
+        price: 39.00,
         frequency: "yearly",
-        nextDate: "2026-03-15",
-        type: "billing"
+        nextDate: "2026-05-03",
+        type: "billing",
+        skipDeadline: "2026-05-01"
     },
     {
-        name: "GitHub Pro",
+        name: "Claude Code",
         category: "Software",
-        price: 4.00,
+        price: 20.00,
         frequency: "monthly",
-        nextDate: "2026-02-12",
-        type: "billing"
-    },
-
-    // Physical Subscriptions (with skip deadlines)
-    {
-        name: "HelloFresh",
-        category: "Food & Beverage",
-        price: 69.99,
-        frequency: "weekly",
-        nextDate: "2026-02-03",
-        type: "shipping",
-        skipDeadline: "2026-02-01"
-    },
-    {
-        name: "Blue Apron",
-        category: "Food & Beverage",
-        price: 47.95,
-        frequency: "weekly",
-        nextDate: "2026-02-05",
-        type: "shipping",
-        skipDeadline: "2026-02-02"
-    },
-    {
-        name: "Trade Coffee",
-        category: "Food & Beverage",
-        price: 24.00,
-        frequency: "biweekly",
-        nextDate: "2026-02-10",
-        type: "shipping",
-        skipDeadline: "2026-02-06"
-    },
-    {
-        name: "Birchbox",
-        category: "Personal Care",
-        price: 15.00,
-        frequency: "monthly",
-        nextDate: "2026-02-18",
-        type: "shipping",
-        skipDeadline: "2026-02-10"
-    },
-    {
-        name: "Dollar Shave Club",
-        category: "Personal Care",
-        price: 10.00,
-        frequency: "monthly",
-        nextDate: "2026-02-22",
-        type: "shipping",
+        nextDate: "2026-02-17",
+        type: "billing",
         skipDeadline: "2026-02-15"
     },
 
-    // Fitness & Health
+    // Skincare
     {
-        name: "Gym Membership",
-        category: "Fitness",
-        price: 49.99,
-        frequency: "monthly",
-        nextDate: "2026-02-01",
-        type: "billing"
+        name: "Hero Cosmetics",
+        category: "Skincare",
+        price: 44.70,  // $42.37 + 5.5% tax
+        frequency: "90days",
+        nextDate: "2026-02-06",
+        type: "shipping",
+        skipDeadline: "2026-02-03"
     },
     {
-        name: "Peloton App",
-        category: "Fitness",
-        price: 12.99,
-        frequency: "monthly",
-        nextDate: "2026-02-14",
-        type: "billing"
-    },
-
-    // News & Reading
-    {
-        name: "The New York Times",
-        category: "News & Reading",
-        price: 17.00,
-        frequency: "monthly",
-        nextDate: "2026-02-07",
-        type: "billing"
+        name: "Kiehl's",
+        category: "Skincare",
+        price: 32.28,  // $30.60 + 5.5% tax
+        frequency: "biannually",
+        nextDate: "2026-10-13",
+        type: "shipping",
+        skipDeadline: "2026-10-03"
     },
     {
-        name: "The Economist",
-        category: "News & Reading",
-        price: 189.00,
-        frequency: "yearly",
-        nextDate: "2026-06-15",
-        type: "billing"
+        name: "Covergirl",
+        category: "Skincare",
+        price: 7.03,  // $6.66 + 5.5% tax
+        frequency: "biannually",
+        nextDate: "2026-07-28",
+        type: "shipping",
+        skipDeadline: "2026-07-21"
     },
 
-    // Cloud Storage
+    // Food
     {
-        name: "iCloud+ 200GB",
-        category: "Cloud Storage",
-        price: 2.99,
+        name: "Kodiak",
+        category: "Food",
+        price: 23.94,  // $22.69 + 5.5% tax
         frequency: "monthly",
-        nextDate: "2026-02-11",
-        type: "billing"
-    },
-    {
-        name: "Google One 2TB",
-        category: "Cloud Storage",
-        price: 99.99,
-        frequency: "yearly",
-        nextDate: "2026-08-20",
-        type: "billing"
+        nextDate: "2026-02-28",
+        type: "shipping",
+        skipDeadline: "2026-02-21"
     }
 ];
 
@@ -159,7 +66,9 @@ const frequencyMultipliers = {
     weekly: 52,
     biweekly: 26,
     monthly: 12,
+    "90days": 4.06,  // 365/90
     quarterly: 4,
+    biannually: 2,
     yearly: 1
 };
 
@@ -202,7 +111,9 @@ function getFrequencyText(frequency) {
         weekly: 'Weekly',
         biweekly: 'Every 2 weeks',
         monthly: 'Monthly',
+        "90days": 'Every 90 days',
         quarterly: 'Quarterly',
+        biannually: 'Every 6 months',
         yearly: 'Yearly'
     };
     return labels[frequency] || frequency;
