@@ -300,29 +300,94 @@ footer {
 }
 
 /* Responsive - stack on narrow screens */
-@media (max-width: 420px) {
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
     main {
         grid-template-columns: 1fr;
     }
 
-    .upcoming-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
+    header {
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    .upcoming-date {
+    .card {
+        padding: 14px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
         text-align: left;
     }
 
-    .subscription-stat-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
+    .section-description {
+        font-size: 0.85rem;
     }
 
-    .subscription-stat-item .sub-details {
-        width: 100%;
-        justify-content: space-between;
+    .subsection-title {
+        font-size: 1rem;
+    }
+
+    /* Larger fonts on mobile */
+    .stat-box h3 {
+        font-size: 0.8rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .category-item {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .subscription-stat-item {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .subscription-stat-item .sub-frequency {
+        font-size: 0.85rem;
+    }
+
+    .upcoming-name {
+        font-size: 1rem;
+    }
+
+    .upcoming-type {
+        font-size: 0.8rem;
+    }
+
+    .upcoming-date .date {
+        font-size: 1rem;
+    }
+
+    .upcoming-date .days-away {
+        font-size: 0.8rem;
+    }
+
+    .upcoming-item {
+        padding: 10px 12px;
+    }
+
+    #subscriptions-table {
+        font-size: 0.85rem;
+    }
+
+    #subscriptions-table th {
+        font-size: 0.75rem;
+    }
+
+    #subscriptions-table th,
+    #subscriptions-table td {
+        padding: 8px 10px;
+    }
+
+    footer {
+        font-size: 0.85rem;
     }
 }
