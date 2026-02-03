@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 :root {
     --primary-color: #2563eb;
     --primary-dark: #1d4ed8;
@@ -47,7 +52,7 @@ header .subtitle {
 /* Main grid layout - cards flow side by side */
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
     gap: 12px;
     align-items: start;
 }
@@ -119,7 +124,7 @@ main {
 /* Category Stats */
 .category-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
     gap: 4px;
 }
 
