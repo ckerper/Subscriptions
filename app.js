@@ -10,15 +10,15 @@ const subscriptions = [
         type: "billing",
         skipDeadline: "2026-05-01"
     },
-    {
-        name: "Claude Code",
-        category: "Software",
-        price: 20.00,
-        frequency: "monthly",
-        nextDate: "2026-02-17",
-        type: "billing",
-        skipDeadline: "2026-02-15"
-    },
+    // {
+    //     name: "Claude Code",
+    //     category: "Software",
+    //     price: 20.00,
+    //     frequency: "monthly",
+    //     nextDate: "2026-02-17",
+    //     type: "billing",
+    //     skipDeadline: "2026-02-15"
+    // },
 
     // Skincare
     {
