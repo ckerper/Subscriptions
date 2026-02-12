@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Subscription Tracker</h1>
+        <p class="subtitle">Track your recurring subscriptions and upcoming deadlines</p>
+    </header>
+
+    <main>
+        <section id="upcoming" class="card">
+            <h2>Upcoming Deadlines & Shipments</h2>
+            <p class="section-description">Subscriptions with skip deadlines or shipments in the next 14 days</p>
+            <div id="upcoming-list" class="subscription-list"></div>
+        </section>
+
+        <section id="stats" class="card">
+            <h2>Annual Cost Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-box total">
+                    <h3>Total Annual Cost</h3>
+                    <p id="total-annual" class="stat-value">$0.00</p>
+                </div>
+                <div class="stat-box monthly-avg">
+                    <h3>Monthly Average</h3>
+                    <p id="monthly-avg" class="stat-value">$0.00</p>
+                </div>
+            </div>
+
+            <h3 class="subsection-title">Cost by Category</h3>
+            <div id="category-stats" class="category-list"></div>
+
+            <h3 class="subsection-title">Cost by Subscription</h3>
+            <div id="subscription-stats" class="subscription-stats-list"></div>
+        </section>
+
+        <section id="all-subscriptions" class="card">
+            <h2>All Subscriptions</h2>
+            <div id="subscriptions-table-container">
+                <table id="subscriptions-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Schedule</th>
+                            <th>Price</th>
+                            <th>Annual Cost</th>
+                            <th>Next Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="subscriptions-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Last updated: <span id="last-updated"></span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
